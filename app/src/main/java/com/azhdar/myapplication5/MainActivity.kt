@@ -16,6 +16,13 @@ import com.azhdar.myapplication5.databinding.RecyclerViewBinding
 
 //test for second commit
 
+
+
+
+
+//salam
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: RecyclerViewBinding
