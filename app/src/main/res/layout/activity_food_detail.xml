@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Food Image -->
+    <ImageView
+        android:id="@+id/food_img"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Header Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/foodHeaderLay"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/bg_top_rounded"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_img">
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/foodCategoryTxt"
+            android:layout_width="wrap_content"
+            android:paddingStart="15dp"
+            android:drawablePadding="5dp"
+            android:layout_height="wrap_content"
+            android:lines="1"
+             android:fontFamily="@font/abel"
+            android:gravity="center_vertical"
+            android:textColor="@color/pewterBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_round_fastfood_24"
+            app:drawableTint="@color/pewterBlue"
+            app:layout_constraintBottom_toBottomOf="@id/foodAreaTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/foodAreaTxt"
+            app:layout_constraintEnd_toStartOf="@id/foodAreaTxt"/>
+
+        <!-- Area -->
+        <TextView
+            android:id="@+id/foodAreaTxt"
+            android:layout_width="wrap_content"
+            android:lines="1"
+
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/abel"
+            android:gravity="center_vertical"
+            android:textColor="@color/pewterBlue"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/ic_round_language_24"
+            app:drawableTint="@color/pewterBlue"
+             app:layout_constraintStart_toEndOf="@id/foodCategoryTxt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Play Button -->
+        <ImageView
+            android:id="@+id/foodPlayImg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_round_smart_display_24"
+            app:layout_constraintBottom_toBottomOf="@id/foodAreaTxt"
+            app:layout_constraintEnd_toStartOf="@id/foodSourceImg"
+            app:layout_constraintTop_toTopOf="@id/foodAreaTxt"
+            app:tint="@color/metallicYellow"/>
+
+        <!-- Source Button -->
+        <ImageView
+            android:id="@+id/foodSourceImg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_baseline_chrome_reader_mode_24"
+            app:layout_constraintBottom_toBottomOf="@id/foodAreaTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/foodAreaTxt"
+            app:tint="@color/metallicYellow"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foodHeaderLay">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Food Title -->
+            <TextView
+                android:id="@+id/food_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/abel"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- Food Description -->
+            <TextView
+                android:id="@+id/food_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/abel"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/food_title"/>
+
+            <!-- Ingredients & Measures Header -->
+            <TextView
+                android:id="@+id/ingredients_measures_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/abel"
+                android:text="ingredients_and_measures"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/food_description"/>
+
+            <!-- Ingredients & Measures Container -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_measures_header">
+
+                <!-- Ingredients Column -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/cooking"/>
+
+                    <TextView
+                        android:id="@+id/ingredients_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:text=" ingredients"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/ingredients_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:padding="15dp"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <!-- Measures Column -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/garnish"/>
+
+                    <TextView
+                        android:id="@+id/measures_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:text="measures"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/measures_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abel"
+                        android:padding="15dp"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
