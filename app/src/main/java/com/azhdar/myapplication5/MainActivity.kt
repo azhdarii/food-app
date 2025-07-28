@@ -12,6 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.azhdar.myapplication5.databinding.RecyclerViewBinding
 
+
+
+//test for second commit
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: RecyclerViewBinding
