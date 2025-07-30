@@ -10,5 +10,6 @@
     <string name="favorite">Favorite</string>
     <string name="foods">Foods</string>
     <string name="imageDisconnected">imageDisconnected</string>
+    <string name="add_to_favorites">add to or remove from favorites</string>
 
 </resources>

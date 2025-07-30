@@ -2,8 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="whiteSmoke">#f6f6f6</color>
+    <color name="favorite_red">#FF5252</color>
+     <color name="whiteSmoke">#f6f6f6</color>
     <color name="darkSlategray">#202d3d</color>
     <color name="darkSlategray70">#B3202d3d</color>
     <color name="tartOrange">#F24C4C</color>

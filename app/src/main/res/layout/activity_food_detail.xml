@@ -6,15 +6,39 @@
     android:layout_height="wrap_content">
 
     <!-- Food Image -->
-    <ImageView
-        android:id="@+id/food_img"
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel"
         android:layout_width="0dp"
         android:layout_height="300dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/food_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+        <!-- Favorite Button -->
+        <ImageButton
+            android:id="@+id/favorite_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/add_to_favorites"
+            android:elevation="10dp"
+            android:src="@drawable/ic_favorite_filled"
+            app:tint="@drawable/add_to_favorite_colors"
+            />
+    </RelativeLayout>
 
     <!-- Header Layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,7 +50,7 @@
         android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/food_img">
+        app:layout_constraintTop_toBottomOf="@id/rel">
 
         <!-- Category -->
         <TextView
