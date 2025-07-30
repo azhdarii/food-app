@@ -1,18 +1,16 @@
-package com.azhdar.myapplication5
+package com.azhdar.myapplication5.presentation.detailfood
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.util.TypedValue
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.azhdar.myapplication5.Food
-import com.azhdar.myapplication5.MealViewModel
+import com.azhdar.myapplication5.data.model.remote.Food
+import com.azhdar.myapplication5.presentation.foodlist.MealViewModel
 import com.azhdar.myapplication5.databinding.ActivityFoodDetailBinding
 import com.bumptech.glide.Glide
 

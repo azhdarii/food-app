@@ -1,6 +1,7 @@
-package com.azhdar.myapplication5
+package com.azhdar.myapplication5.data.remote
 
-import retrofit2.Response
+import com.azhdar.myapplication5.data.model.remote.CategoryResponse
+import com.azhdar.myapplication5.data.model.remote.FoodResponse
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -21,7 +22,7 @@ interface ApiServices {
         suspend fun getMealDetails(@Query("i") mealId: String): FoodResponse
 
         @GET("api/json/v1/1/search.php")
-        suspend fun getMealsbySearch(@Query("f") searchText: String):FoodResponse
+        suspend fun getMealsbySearch(@Query("f") searchText: String): FoodResponse
 
         companion object {
             const val BASE_URL = "https://www.themealdb.com/"

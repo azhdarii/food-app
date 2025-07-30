@@ -1,4 +1,4 @@
-package com.azhdar.myapplication5
+package com.azhdar.myapplication5.data.model.remote
 data class Food(
     val idMeal: String,
     val strMeal: String,

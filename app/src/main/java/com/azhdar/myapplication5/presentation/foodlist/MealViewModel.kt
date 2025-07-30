@@ -1,10 +1,13 @@
-package com.azhdar.myapplication5
+package com.azhdar.myapplication5.presentation.foodlist
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.azhdar.myapplication5.data.model.remote.Category
+import com.azhdar.myapplication5.data.model.remote.Food
+import com.azhdar.myapplication5.data.repository.Repository
 import kotlinx.coroutines.launch
 
 class MealViewModel(application: Application) : AndroidViewModel(application) {

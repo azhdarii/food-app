@@ -1,4 +1,8 @@
-package com.azhdar.myapplication5
+package com.azhdar.myapplication5.data.repository
+
+import com.azhdar.myapplication5.data.remote.ApiServices
+import com.azhdar.myapplication5.data.model.remote.Category
+import com.azhdar.myapplication5.data.model.remote.Food
 
 class Repository {
     private val mealApiService = ApiServices.create()

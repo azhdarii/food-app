@@ -1,26 +1,17 @@
-package com.azhdar.myapplication5
+package com.azhdar.myapplication5.presentation.main
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.media.Image
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.azhdar.myapplication5.presentation.categorylist.CategoriesAdapter
+import com.azhdar.myapplication5.presentation.foodlist.FoodAdapter
+import com.azhdar.myapplication5.presentation.detailfood.FoodDetailActivity
+import com.azhdar.myapplication5.presentation.foodlist.MealViewModel
 import com.azhdar.myapplication5.databinding.RecyclerViewBinding
 
-
-
-//test for second commit
-
-
-
-
-
-//salam
 
 
 class MainActivity : AppCompatActivity() {
