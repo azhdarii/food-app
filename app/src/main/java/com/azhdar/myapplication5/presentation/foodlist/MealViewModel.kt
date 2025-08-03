@@ -7,11 +7,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.azhdar.myapplication5.data.model.remote.Category
 import com.azhdar.myapplication5.data.model.remote.Food
-import com.azhdar.myapplication5.data.repository.Repository
+import com.azhdar.myapplication5.data.repository.FoodRepository
 import kotlinx.coroutines.launch
 
 class MealViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository = Repository()
+    private val repository = FoodRepository()
 
     private val _randomMeal = MutableLiveData<Food?>()
     val randomMeal: LiveData<Food?> = _randomMeal

@@ -1,5 +1,9 @@
 package com.azhdar.myapplication5.data.model.remote
-data class Food(
+
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+ data class Food(
     val idMeal: String,
     val strMeal: String,
     val strMealThumb: String,
@@ -51,7 +55,7 @@ data class Food(
     val strMeasure18: String?,
     val strMeasure19: String?,
     val strMeasure20: String?
-) {
+)  {
 
 
 
@@ -79,43 +83,7 @@ data class Food(
 
 
 
-    fun getIngredientsWithMeasures(): String {
-        val ingredientsList = mutableListOf<String>()
 
-        for (i in 1..20) {
-            try {
-                val ingredientField = this::class.java.getDeclaredField("strIngredient$i")
-                val measureField = this::class.java.getDeclaredField("strMeasure$i")
-
-                val ingredient = ingredientField.get(this) as? String
-                val measure = measureField.get(this) as? String
-
-                if (!ingredient.isNullOrBlank() && !measure.isNullOrBlank()) {
-                    ingredientsList.add("$ingredient   :    $measure\n")
-                }
-            } catch (e: Exception) {
-                // Field doesn't exist or other reflection error
-            }
-        }
-
-        return ingredientsList.joinToString(", ")
-    }
-
-    // Alternative version that returns List<Pair> if you need structured data
-    fun getIngredientsWithMeasuresList(): List<Pair<String, String>> {
-        return (1..20).mapNotNull { i ->
-            try {
-                val ingredient = this::class.java.getDeclaredField("strIngredient$i").get(this) as? String
-                val measure = this::class.java.getDeclaredField("strMeasure$i").get(this) as? String
-
-                if (!ingredient.isNullOrBlank() && !measure.isNullOrBlank()) {
-                    Pair(ingredient, measure)
-                } else null
-            } catch (e: Exception) {
-                null
-            }
-        }
-    }
 }
 
 data class FoodResponse(

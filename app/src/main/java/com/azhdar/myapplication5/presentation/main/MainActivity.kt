@@ -3,9 +3,8 @@ package com.azhdar.myapplication5.presentation.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.azhdar.myapplication5.R
-import com.azhdar.myapplication5.databinding.ActivityMainBinding
 import com.azhdar.myapplication5.databinding.RecyclerViewBinding
-import com.azhdar.myapplication5.presentation.favorite.FavoritesFragment
+import com.azhdar.myapplication5.presentation.favorites.FavoritesFragment
 import com.azhdar.myapplication5.presentation.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {

@@ -4,7 +4,7 @@ import com.azhdar.myapplication5.data.remote.ApiServices
 import com.azhdar.myapplication5.data.model.remote.Category
 import com.azhdar.myapplication5.data.model.remote.Food
 
-class Repository {
+class FoodRepository {
     private val mealApiService = ApiServices.create()
 
     suspend fun getRandomMeal(): Food? {

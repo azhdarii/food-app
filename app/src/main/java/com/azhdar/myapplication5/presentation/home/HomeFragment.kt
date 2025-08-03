@@ -10,12 +10,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.azhdar.myapplication5.R
 import com.azhdar.myapplication5.databinding.FragmentHomeBinding
 import com.azhdar.myapplication5.presentation.categorylist.CategoriesAdapter
-import com.azhdar.myapplication5.presentation.detailfood.FoodDetailActivity
+import com.azhdar.myapplication5.presentation.fooddetail.FoodDetailActivity
 import com.azhdar.myapplication5.presentation.foodlist.FoodAdapter
 import com.azhdar.myapplication5.presentation.foodlist.MealViewModel
+import com.google.gson.Gson
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -60,10 +60,12 @@ class HomeFragment : Fragment() {
             }
 
             foodAdapter = FoodAdapter(emptyList()) { meal ->
-                val intent = Intent(requireContext(), FoodDetailActivity::class.java).apply {
-                    putExtra("MEAL_ID", meal?.idMeal)
+                meal?.let { nonNullMeal ->
+                    val intent = Intent(requireContext(), FoodDetailActivity::class.java).apply {
+                        putExtra("MEAL_JSON", Gson().toJson(nonNullMeal))  // Fixed variable name
+                    }
+                    startActivity(intent)
                 }
-                startActivity(intent)
             }
 
             // Setup RecyclerViews
